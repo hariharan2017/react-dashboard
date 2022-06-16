@@ -1,5 +1,6 @@
 import Widget from "../Widget";
 import Featured from "../Featured";
+import Chart from "../Chart";
 import { widgetsData } from "./config";
 import "./Home.scss";
 
@@ -19,9 +20,9 @@ const Home = () => {
           return <Widget title={title} data={data} icon={icon}/>
         })}
       </div>
-      <div className="chart-container">
+      <div className="main-charts-container">
         <Featured {...featuredData}/>
-        <div style={{ flex: "3" }}>Chart</div>
+        <Chart />
       </div>
     </div>
   );
