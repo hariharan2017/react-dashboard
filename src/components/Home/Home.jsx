@@ -1,6 +1,7 @@
 import Widget from "../Widget";
 import Featured from "../Featured";
 import Chart from "../Chart";
+import Table from "../Table"
 import { widgetsData } from "./config";
 import "./Home.scss";
 
@@ -23,6 +24,9 @@ const Home = () => {
       <div className="main-charts-container">
         <Featured {...featuredData}/>
         <Chart />
+      </div>
+      <div className="home-table-container">
+        <Table title={"Latest Transactions"}/>
       </div>
     </div>
   );

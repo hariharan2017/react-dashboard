@@ -57,7 +57,7 @@ const Chart = ({ title = "Last 6 months (Revenue)" }) => {
   return (
     <div className="chart-container">
       <div className="chart-title">{title}</div>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" >
         <AreaChart
           width={500}
           height={2000}
@@ -69,7 +69,7 @@ const Chart = ({ title = "Last 6 months (Revenue)" }) => {
             bottom: 0,
           }}
         >
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" stroke="gray" />
           <YAxis />
           <Tooltip />
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
