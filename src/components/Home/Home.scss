@@ -7,3 +7,13 @@
     width: 100%;
   }
 }
+
+.chart-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  & > div {
+    margin: 2%;
+    width: 100%;
+  }
+}

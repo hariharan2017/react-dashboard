@@ -1,5 +1,4 @@
 .side-bar-container {
-  height: 100vh;
   border-right: 0.5px solid rgb(230, 227, 227);
   flex: 1;
 }
@@ -28,6 +27,7 @@
 
   &:hover {
     background-color: rgb(233, 233, 233);
+    margin-left: 5%;
   }
 }
 
