@@ -1,6 +1,7 @@
 .side-bar-container {
   height: 100vh;
   border-right: 0.5px solid rgb(230, 227, 227);
+  flex: 1;
 }
 
 .logo-container {
@@ -44,7 +45,7 @@
 
   .white-box {
     height: 20px;
-    max-width: 20px;
+    width: 20px;
     border: 1px solid #6439ff;
     border-radius: 5px;
     background-color: lightgray;
@@ -53,7 +54,7 @@
 
   .black-box {
     height: 20px;
-    max-width: 20px;
+    width: 20px;
     border: 1px solid #6439ff;
     border-radius: 5px;
     background-color: #333;
