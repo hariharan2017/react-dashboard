@@ -38,6 +38,7 @@ const Datagrid = () => {
     <div className="data-grid-container">
       <div className="data-grid-title">Users</div>
       <DataGrid 
+        className="datagrid"
         rows={tableData}
         columns={columns.concat(actionColumns)}
         pageSize={pageSize}

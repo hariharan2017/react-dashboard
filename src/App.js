@@ -1,14 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Datagrid from "./components/Datagrid";
+import { DARK_MODE } from "./constants/constants";
+
 import "./App.scss";
+import "./styles/dark.scss"
 
 function App() {
+  const { theme } = useSelector((state) => state.application.app);
+  
   return (
     <BrowserRouter>
-      <div className="app-container">
+      <div className={theme === DARK_MODE ? "app-container dark" : "app-container"}>
         <Sidebar />
         <div className="main-container">
           <Navbar />

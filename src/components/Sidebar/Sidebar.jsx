@@ -2,8 +2,12 @@ import { Dashboard, Group, Store, Inventory, LocalShipping, Equalizer, Settings,
 // import { sidebarItems } from "./config";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { actions as appActions } from "../../data/app";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="side-bar-container">
       <div className="logo-container">Dashboard</div>
@@ -61,8 +65,8 @@ const Sidebar = () => {
       <div className="group-container">
         <div>Theme</div>
         <div className="theme-group">
-          <div className="white-box"></div>
-          <div className="black-box"></div>
+          <div className="white-box" onClick={() => dispatch(appActions.changeToLightMode())}></div>
+          <div className="black-box" onClick={() => dispatch(appActions.changeToDarkMode())}></div>
         </div>
       </div>
     </div>

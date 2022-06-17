@@ -6,9 +6,15 @@ import {
   ChatBubbleOutlineOutlined,
   LanguageOutlined,
 } from "@mui/icons-material";
+import { useSelector, useDispatch } from "react-redux";
+import { actions as appActions } from "../../data/app";
+import { LIGHT_MODE, DARK_MODE } from "../../constants/constants";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const { theme } = useSelector((state) => (state.application.app));
+
   return (
     <div className="navbar-main-container">
       <div className="language-container">
@@ -23,8 +29,9 @@ const Navbar = () => {
           <MenuItem value={"ch"}>Chinese</MenuItem>
         </Select>
       </div>
-      <div>
-        <LightModeOutlined className="icon" />
+      <div onClick={() => dispatch(appActions.toggleTheme())}>
+        {theme === LIGHT_MODE && <LightModeOutlined className="icon" />}
+        {theme === DARK_MODE && <DarkModeOutlined className="icon" />}
       </div>
       <div>
         <NotificationsNoneOutlined className="icon" />

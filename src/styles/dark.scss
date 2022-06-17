@@ -1,0 +1,50 @@
+.app-container.dark {
+  background-color: #222;
+  color: rgb(156, 156, 156);
+
+  .table-container {
+    background-color: #222;
+
+    .tableCell {
+      color: gray;
+    }
+  }
+
+  .MuiSelect-select {
+    color: rgb(156, 156, 156);
+  }
+
+  .data-grid-container {
+    .datagrid {
+      color: rgb(156, 156, 156);
+
+      .action-button-view {
+        color: rgb(156, 156, 156);
+        border: 1px dotted rgb(156, 156, 156);
+      }
+
+      .action-button-delete {
+        color: rgb(156, 156, 156);
+        border: 1px dotted rgb(156, 156, 156);
+      }
+
+      .status-cell {
+        &.active {
+          color: rgb(156, 156, 156);
+          background-color: #222;
+          border: 1px dotted rgb(156, 156, 156);
+        }
+        &.pending {
+          color: rgb(156, 156, 156);
+          background-color: #222;
+          border: 1px dotted rgb(156, 156, 156);
+        }
+        &.passive {
+          color: rgb(156, 156, 156);
+          background-color: #222;
+          border: 1px dotted rgb(156, 156, 156);
+        }
+      }
+    }
+  }
+}
