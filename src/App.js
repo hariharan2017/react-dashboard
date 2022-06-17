@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Datagrid from "./components/Datagrid";
+import Login from "./components/Login";
 import { DARK_MODE } from "./constants/constants";
 
 import "./App.scss";
