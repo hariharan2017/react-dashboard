@@ -1,6 +1,7 @@
 import { Dashboard, Group, Store, Inventory, LocalShipping, Equalizer, Settings, AccountBox, Logout } from "@mui/icons-material";
 // import { sidebarItems } from "./config";
 import "./Sidebar.scss";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -9,17 +10,21 @@ const Sidebar = () => {
       <div className="main-items-container">
         <div className="group-container">
           <div>Main</div>
+          <Link to="/">
           <div className="group-item">
             <Dashboard className="group-item-icon"/>
             <div className="group-item-title">Dashboard</div>
           </div>
+          </Link>
         </div>
         <div className="group-container">
           <div>Lists</div>
+          <Link to="/users">
           <div className="group-item">
             <Group className="group-item-icon"/>
             <div className="group-item-title">Users</div>
           </div>
+          </Link>
           <div className="group-item">
             <Store className="group-item-icon"/>
             <div className="group-item-title">Products</div>
