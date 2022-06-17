@@ -1,0 +1,42 @@
+.data-grid-container {
+  height: 75%;
+  padding: 2%;
+
+  .data-grid-title {
+    font-size: 1.4rem;
+    color: gray;
+    padding: 0 0 1% 2%;
+  }
+
+  .table-cell-image-container {
+    display: flex;
+    align-items: center;
+
+    .table-cell-image {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 25px;
+    }
+  }
+
+  .status-cell {
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+
+    &.active {
+      color: green;
+      background-color: rgba(0, 128, 0, 0.151);
+    }
+    &.pending {
+      color: goldenrod;
+      background-color: rgba(189, 189, 3, 0.103);
+    }
+    &.passive {
+      color: crimson;
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+  }
+}
