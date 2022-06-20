@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Datagrid from "./components/Datagrid";
 import Login from "./components/Login";
+import { history } from "./utils/history";
 import { DARK_MODE } from "./constants/constants";
 
 import "./App.scss";
@@ -12,17 +13,22 @@ import "./styles/dark.scss"
 
 function App() {
   const { theme } = useSelector((state) => state.application.app);
-  
+  const { loggedIn } = useSelector((state) => state.authentication);
+  if(!loggedIn) {
+    history.push("/");
+  }
+
   return (
     <BrowserRouter>
       <div className={theme === DARK_MODE ? "app-container dark" : "app-container"}>
-        <Sidebar />
+        {loggedIn && <Sidebar />}
         <div className="main-container">
-          <Navbar />
-          <Routes>
+          {loggedIn && <Navbar />}
+          <Routes history={history}>
             <Route path="/">
-              <Route index element={<Home />} />
-              <Route path="users" element={<Datagrid />}></Route>
+              {!loggedIn && <Route index element={<Login />} />}
+              <Route path="home" element={<Home />} />
+              <Route path="users" element={<Datagrid />} />
             </Route>
           </Routes>
         </div>
