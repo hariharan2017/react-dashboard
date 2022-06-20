@@ -14,7 +14,7 @@ const Sidebar = () => {
       <div className="main-items-container">
         <div className="group-container">
           <div>Main</div>
-          <Link to="/">
+          <Link to="/home">
           <div className="group-item">
             <Dashboard className="group-item-icon"/>
             <div className="group-item-title">Dashboard</div>
