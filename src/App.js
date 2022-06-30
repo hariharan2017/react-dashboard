@@ -14,10 +14,11 @@ import "./styles/dark.scss"
 function App() {
   const { theme } = useSelector((state) => state.application.app);
   const { loggedIn } = useSelector((state) => state.authentication);
+
   if(!loggedIn) {
     history.push("/");
   }
-
+  
   return (
     <BrowserRouter>
       <div className={theme === DARK_MODE ? "app-container dark" : "app-container"}>
@@ -27,8 +28,8 @@ function App() {
           <Routes history={history}>
             <Route path="/">
               {!loggedIn && <Route index element={<Login />} />}
-              <Route path="home" element={<Home />} />
-              <Route path="users" element={<Datagrid />} />
+              {loggedIn && <Route path="home" element={<Home />} />}
+              {loggedIn && <Route path="users" element={<Datagrid />} />}
             </Route>
           </Routes>
         </div>

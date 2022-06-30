@@ -23,7 +23,7 @@ const Login = () => {
         <div>
           <input id="password" placeholder="Password" type={"password"} className="input-style" onChange={(event) => onTextChange(event)}/>
         </div>
-        <button className="button-style" onClick={() => {console.log(form); dispatch(actions.login(form))}}>Login</button>
+        <button className="button-style" onClick={() => {dispatch(actions.login(form))}}>Login</button>
       </div>
     </div>
   );

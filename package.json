@@ -29,7 +29,7 @@
     "sass": "^1.52.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:app": "react-scripts start",
     "start:mock": "node ./mock/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -4,7 +4,6 @@ export default (state, action) => {
   state = state || { loading: false, error: null, loggedIn: false };
   switch (action.type) {
     case actionType.AUTHENTICATION_LOGIN:
-      console.log(action);
       return {
         ...state,
         loading: true,

@@ -4,6 +4,7 @@ import "./Sidebar.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { actions as appActions } from "../../data/app";
+import { actions as authActions } from "../../data/login";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -56,7 +57,7 @@ const Sidebar = () => {
             <AccountBox className="group-item-icon"/>
             <div className="group-item-title">Profile</div>
           </div>
-          <div className="group-item">
+          <div className="group-item" onClick={() => {dispatch(authActions.logout()); window.location.reload();}}>
             <Logout className="group-item-icon"/>
             <div className="group-item-title">Logout</div>
           </div>
