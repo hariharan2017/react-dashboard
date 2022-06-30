@@ -118,13 +118,13 @@ const MuiTable = ({ title }) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
-            <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
-            <TableCell className="tableCell">Status</TableCell>
+            <TableCell className="tableCell tableHeader">Tracking ID</TableCell>
+            <TableCell className="tableCell tableHeader">Product</TableCell>
+            <TableCell className="tableCell tableHeader">Customer</TableCell>
+            <TableCell className="tableCell tableHeader">Date</TableCell>
+            <TableCell className="tableCell tableHeader">Amount</TableCell>
+            <TableCell className="tableCell tableHeader">Payment Method</TableCell>
+            <TableCell className="tableCell tableHeader">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
