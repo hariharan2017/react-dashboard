@@ -11,3 +11,8 @@ export const changeToDarkMode = () => ({
 export const toggleTheme = () => ({
   type: types.TOGGLE_THEME
 });
+
+export const changeLanguage = (lang) => ({
+  type: types.CHANGE_LANGUAGE,
+  lang
+});

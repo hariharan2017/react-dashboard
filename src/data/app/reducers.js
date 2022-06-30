@@ -3,7 +3,7 @@ import * as types from "./types";
 import { LIGHT_MODE, DARK_MODE } from "../../constants/constants";
 
 const ApplicationReducer = (state, action) => {
-  state = state || { theme: LIGHT_MODE };
+  state = state || { theme: LIGHT_MODE, language: "en" };
   switch (action.type) {
     case types.CHANGE_TO_DARK_MODE:
       return {
@@ -27,6 +27,11 @@ const ApplicationReducer = (state, action) => {
           theme: LIGHT_MODE,
         };
       }
+    case types.CHANGE_LANGUAGE:
+      return {
+        ...state,
+        language: action.lang
+      };
     default:
       return state;
   }
