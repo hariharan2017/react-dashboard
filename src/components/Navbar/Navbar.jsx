@@ -13,7 +13,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const { theme } = useSelector((state) => (state.application.app));
+  const { theme, language } = useSelector((state) => (state.application.app));
 
   return (
     <div className="navbar-main-container">
@@ -21,8 +21,8 @@ const Navbar = () => {
         <LanguageOutlined />
         <Select
           className="language-selector"
-          value={"en"}
-          onChange={() => console.log("Changed")}
+          value={language}
+          onChange={(event) => {dispatch(appActions.changeLanguage(event.target.value))}}
         >
           <MenuItem value={"en"}>English</MenuItem>
           <MenuItem value={"jp"}>Japanese</MenuItem>
